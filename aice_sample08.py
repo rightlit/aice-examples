@@ -1,3 +1,5 @@
+df = pd.read_csv('Invistico_Airline.csv')
+
 import tensorflow as tf
 #from tensorflow import keras
 from tensorflow.keras.layers import Input, Dense, Dropout
