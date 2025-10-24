@@ -5,6 +5,11 @@ from sklearn.model_selection import train_test_split
 
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
 
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+#model = DecisionTreeClassifier(random_state=42)
+#model2 = RandomForestClassifier(n_estimators=10)
+
 from sklearn.tree import DecisionTreeRegressor
 #model = DecisionTreeRegressor(random_state = 120)
 model = DecisionTreeRegressor(random_state = 120, min_samples_split=3)
@@ -56,6 +61,7 @@ plt.ylabel('Loss')
 plt.legend(['train', 'val'], loc='upper right')
 plt.show()
           
+
 
 
 
