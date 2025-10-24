@@ -9,6 +9,7 @@ from sklearn.tree import DecisionTreeRegressor
 #model = DecisionTreeRegressor(random_state = 120)
 model = DecisionTreeRegressor(random_state = 120, min_samples_split=3)
 model.fit(X_train, Y_train)
+
 from sklearn.ensemble import RandomForestRegressor
 model2 = RandomForestRegressor()
 model2.fit(X_train, y_train)
@@ -55,5 +56,6 @@ plt.ylabel('Loss')
 plt.legend(['train', 'val'], loc='upper right')
 plt.show()
           
+
 
 
