@@ -6,11 +6,14 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
 
 from sklearn.tree import DecisionTreeRegressor
+#model = DecisionTreeRegressor(random_state = 120)
+model = DecisionTreeRegressor(random_state = 120, min_samples_split=3)
+model.fit(X_train, Y_train)
+from sklearn.ensemble import RandomForestRegressor
+model2 = RandomForestRegressor()
+model2.fit(X_train, y_train)
 
-#model2 = DecisionTreeRegressor(random_state = 120)
-model2 = DecisionTreeRegressor(random_state = 120, min_samples_split=3)
-model2.fit(X_train, Y_train)
-
+from sklearn.metrics import accuracy_score
 from sklearn.metrics import mean_squared_error
 
 y_predict = model.predict(X_test)
@@ -52,4 +55,5 @@ plt.ylabel('Loss')
 plt.legend(['train', 'val'], loc='upper right')
 plt.show()
           
+
 
