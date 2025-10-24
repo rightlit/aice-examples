@@ -30,6 +30,9 @@ y_predict = model2.predict(X_test)
 mse2 = mean_squared_error(Y_test, y_predict)
 mse2
 
+accuracy = accuracy_score(Y_test, y_pred)
+accuracy
+
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping
@@ -61,6 +64,7 @@ plt.ylabel('Loss')
 plt.legend(['train', 'val'], loc='upper right')
 plt.show()
           
+
 
 
 
