@@ -1,5 +1,7 @@
 df = pd.read_csv('signal_data.csv')
 
+#df['A'].replace([1, 2, 3], [10, 20, 30], inplace=True)
+df['A'].replace([1, 2, 3], [10, 20, 30])
 
 from sklearn.model_selection import train_test_split
 
@@ -64,6 +66,7 @@ plt.ylabel('Loss')
 plt.legend(['train', 'val'], loc='upper right')
 plt.show()
           
+
 
 
 
